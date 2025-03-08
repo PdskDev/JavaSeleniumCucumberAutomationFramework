@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = "src/test/java/features",
         glue = "stepDefinitions",
-        tags = "@GettingStarted and @RegressionTest",
+        tags = "not @SmokeTest",
         monochrome = true,
         plugin = {"html:target/cucumber-report/cucumber.html", "json:target/cucumber-report/cucumber.json"})
 public class TestNGRunner extends AbstractTestNGCucumberTests {}

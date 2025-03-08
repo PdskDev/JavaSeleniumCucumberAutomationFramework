@@ -15,8 +15,7 @@ Feature: Application login
     Then Home Page is displayed
     And Cards are displayed
 
-  @MultipleUsers
-  @SmokeTest
+  @MultipleUsers @SmokeTest
   Scenario Outline: Multiple Users Page default login
     Given User is on netBanking landing page
     When User login into application with username <Username> and password <Password>
