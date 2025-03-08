@@ -15,7 +15,12 @@ public class MainSteps {
       System.out.println("User logged into application");
     }
 
-    @When("User login into application with username {string} and password {string}")
+   /* @When("User login into application with username {string} and password {string}")
+    public void userLoginIntoApplicationWithUsernameAndPassword(String username, String password) {
+        System.out.printf("User logged into application with username %s and password %s%n", username, password);
+    }*/
+
+    @When("^User login into application with username (.+) and password (.+)$")
     public void userLoginIntoApplicationWithUsernameAndPassword(String username, String password) {
         System.out.printf("User logged into application with username %s and password %s%n", username, password);
     }

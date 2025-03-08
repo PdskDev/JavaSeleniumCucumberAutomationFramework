@@ -10,13 +10,13 @@ Feature: Application login
 
   Scenario: User Page default login
     Given User is on netBanking landing page
-    When User login into application with username "customer1" and password "pass2"
+    When User login into application with username customer1 and password 123456
     Then Home Page is displayed
     And Cards are displayed
 
   Scenario Outline: Multiple Users Page default login
     Given User is on netBanking landing page
-    When User login into application with username "<Username>" and password "<Password>"
+    When User login into application with username <Username> and password <Password>
     Then Home Page is displayed
     And Cards are displayed
     Examples:
