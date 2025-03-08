@@ -4,6 +4,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import java.util.List;
+
 public class MainSteps {
     @Given("User is on netBanking landing page")
     public void user_is_on_net_banking_landing_page() {
@@ -33,6 +35,15 @@ public class MainSteps {
     @Then("Cards are displayed")
     public void cards_are_displayed() {
        System.out.println("Cards are displayed");
+    }
+
+    @Given("User is on Practice landing page")
+    public void user_is_on_practice_landing_page() {
+        System.out.println("Practice Page is displayed");
+    }
+    @When("User signup into application")
+    public void user_signup_into_application(List<String> data) {
+        data.forEach(System.out::println);
     }
 
 
