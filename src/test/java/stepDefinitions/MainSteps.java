@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -47,4 +48,18 @@ public class MainSteps {
     }
 
 
+    @Given("setup the entries in database")
+    public void setupTheEntriesInDatabase() {
+        System.out.println("Background: setup database entries");
+    }
+
+    @When("launch the browser from config variable")
+    public void launchTheBrowserFromConfigVariable() {
+        System.out.println("Background: launch browser");
+    }
+
+    @And("hit the home page url of banking site")
+    public void hitTheHomePageUrlOfBankingSite() {
+        System.out.println("Background: hit home page url");
+    }
 }

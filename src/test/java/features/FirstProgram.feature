@@ -1,5 +1,10 @@
 Feature: Application login
 
+  Background:
+    Given setup the entries in database
+    When launch the browser from config variable
+    And hit the home page url of banking site
+
   @GettingStarted @RegressionTest
   Scenario: Admin Page default login
     Given User is on netBanking landing page
