@@ -15,6 +15,11 @@ public class MainSteps {
       System.out.println("User logged into application");
     }
 
+    @When("User login into application with username {string} and password {string}")
+    public void userLoginIntoApplicationWithUsernameAndPassword(String username, String password) {
+        System.out.printf("User logged into application with username %s and password %s%n", username, password);
+    }
+
     @Then("Home Page is displayed")
     public void home_page_is_displayed() {
       System.out.println("Home Page is displayed");
@@ -24,4 +29,6 @@ public class MainSteps {
     public void cards_are_displayed() {
        System.out.println("Cards are displayed");
     }
+
+
 }
