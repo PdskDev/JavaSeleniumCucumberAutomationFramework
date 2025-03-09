@@ -5,8 +5,9 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = "src/test/java/features",
+        dryRun = true,
         glue = "stepDefinitions",
-        tags = "not @SmokeTest",
+        tags = "@SmokeTest or @MultipleUsers or @NetBanking",
         monochrome = true,
-        plugin = {"html:target/cucumber-report/cucumber.html", "json:target/cucumber-report/cucumber.json"})
+        plugin = {"pretty", "html:target/cucumber-report/cucumber.html", "json:target/cucumber-report/cucumber.json"})
 public class TestNGRunner extends AbstractTestNGCucumberTests {}

@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -41,10 +42,12 @@ public class MainSteps {
     @Given("User is on Practice landing page")
     public void user_is_on_practice_landing_page() {
         System.out.println("Practice Page is displayed");
+        Assert.fail("User is on Practice landing page");
     }
     @When("User signup into application")
     public void user_signup_into_application(List<String> data) {
         data.forEach(System.out::println);
+        Assert.fail("User signup into application");
     }
 
 
